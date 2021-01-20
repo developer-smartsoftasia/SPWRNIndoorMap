@@ -9,7 +9,7 @@ import com.siampiwat.indoormapsdk.presentation.view.indoormap.IndoorMapActivity
 
 public class RNIndoormapModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
-    override fun getName(): String {
+    public override fun getName(): String {
         return "SPWIndoorMap"
     }
 
