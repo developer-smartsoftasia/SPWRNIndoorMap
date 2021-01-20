@@ -1,0 +1,53 @@
+
+buildscript {
+    ext.kotlin_version = '1.4.30-M1'
+
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:3.4.2")
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+repositories {
+    mavenCentral()
+    google()
+    jcenter()
+    maven {
+        url("$rootDir/../node_modules/react-native/android")
+    }
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://dl.bintray.com/ssa/com.siampiwat' }
+}
+
+dependencies {
+    implementation "com.facebook.react:react-native:+"
+    implementation 'com.siampiwat:indoormapsdk:0.9.6'
+    implementation 'com.google.guava:guava:27.0.1-android'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.core:core-ktx:+"
+}
+
+  
