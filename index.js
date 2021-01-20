@@ -1,6 +1,41 @@
+import { NativeModules } from "react-native";
+const { SPWIndoorMap } = NativeModules;
 
-import { NativeModules } from 'react-native';
+export const presentIndoorMap = () => {
+  SPWIndoorMap.presentIndoorMap();
+};
 
-const { RNIndoormap } = NativeModules;
+export const getAllStores = (successCallback) => {
+  SPWIndoorMap.getAllStoresJSON((res) => {
+    successCallback(JSON.parse(res));
+  });
+};
 
-export default RNIndoormap;
+export const setOrigin = (store_id) => {
+  SPWIndoorMap.setOrigin(store_id);
+};
+
+export const setDestination = (store_id) => {
+  SPWIndoorMap.setDestination(store_id);
+};
+
+export const setStores = (stores) => {
+  SPWIndoorMap.setStores(stores);
+};
+
+export const getStore = (store_id, successCallback) => {
+  SPWIndoorMap.getStore(store_id, (res) => {
+    successCallback(JSON.parse(res));
+  });
+};
+
+export const getVenues = (successCallback, errorCallback) => {
+  SPWIndoorMap.getVenuesSuccessCallback(
+    () => {
+      successCallback();
+    },
+    (error) => {
+      errorCallback(error);
+    }
+  );
+};
