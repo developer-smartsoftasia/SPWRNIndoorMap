@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "10.0"
   s.ios.deployment_target = "10.0"
   s.source       = { :git => "https://github.com/author/RNIndoormap.git", :tag => "master" }
-  s.source_files  = "RNIndoormap/**/*.{h,m}"
+  s.source_files  = "*.{h,m}"
   s.requires_arc = true
 
 
