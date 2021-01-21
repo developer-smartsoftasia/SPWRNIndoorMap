@@ -1,10 +1,10 @@
-# react-native-indoormap
+# react-native-siam-piwat-indoormap
 
 ## Getting started
 
 `$ npm install react-native-siam-piwat-indoormap@1.0.4 --save`
 
-## OR
+### OR
 
 `yarn add react-native-siam-piwat-indoormap@1.0.4`
 
