@@ -73,12 +73,14 @@ override fun onCreate() {
 
 ```kotlin
 
+// >>> import this <<<
 import com.siampiwat.indoormapsdk.IndoorMapSDK
 import com.siampiwat.indoormapsdk.data.appenum.SPWApplicationSlug
 import com.siampiwat.indoormapsdk.data.appenum.SPWLanguage
 
 override fun onCreate(savedInstanceState: Bundle?) {
 	super.onCreate(savedInstanceState)
+	// >>> Add this method <<<
 	IndoorMapSDK.initialize(SPWApplicationSlug.ICON_SIAM, "", SPWLanguage.TH, true)
 }
 
