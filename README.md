@@ -45,8 +45,9 @@
 #### Android
 
 1. Verify `compileSdkVersion = 29`
-2. Add `maven { url 'https://dl.bintray.com/ssa/com.siampiwat' }` to build.gradle
-3. Add this code to `MainApplication` file.
+2. Add `maven { url 'https://dl.bintray.com/ssa/com.siampiwat' }` to `build.gradle`
+3. Add dependency `implementation com.siampiwat:indoormapsdk:0.9.6` to `app/build.gradle`
+4. Add this code to `MainApplication` file.
 
 ```kotlin
 
@@ -59,7 +60,7 @@ override fun onCreate() {
 
 ```
 
-4. Add this code to `MainActivity`
+5. Add this code to `MainActivity`
 
 ```kotlin
 
