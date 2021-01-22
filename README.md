@@ -46,7 +46,16 @@
 
 1. Verify `compileSdkVersion = 29`
 2. Add `maven { url 'https://dl.bintray.com/ssa/com.siampiwat' }` to `build.gradle`
-3. Add dependency `implementation com.siampiwat:indoormapsdk:0.9.6` to `app/build.gradle`
+3. Add dependencies to `app/build.gradle`
+
+```groovy
+dependencies {
+    ...
+    implementation 'com.siampiwat:indoormapsdk:0.9.6'
+    ...
+}
+```
+
 4. Add this code to `MainApplication` file.
 
 ```kotlin
