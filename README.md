@@ -4,7 +4,7 @@
 
 `$ npm install react-native-siam-piwat-indoormap@1.0.4 --save`
 
-### OR
+#### OR
 
 `yarn add react-native-siam-piwat-indoormap@1.0.4`
 
@@ -73,7 +73,7 @@ override fun onCreate() {
 
 ```kotlin
 
-// >>> import this <<<
+// >>> import these <<<
 import com.siampiwat.indoormapsdk.IndoorMapSDK
 import com.siampiwat.indoormapsdk.data.appenum.SPWApplicationSlug
 import com.siampiwat.indoormapsdk.data.appenum.SPWLanguage
