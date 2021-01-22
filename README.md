@@ -50,9 +50,9 @@
 
 ```groovy
 dependencies {
-    ...
+    ..
     implementation 'com.siampiwat:indoormapsdk:0.9.6'
-    ...
+    ..
 }
 ```
 
