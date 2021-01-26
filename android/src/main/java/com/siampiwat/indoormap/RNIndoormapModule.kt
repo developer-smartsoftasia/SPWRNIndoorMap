@@ -32,6 +32,11 @@ public class RNIndoormapModule(reactContext: ReactApplicationContext) : ReactCon
     }
 
     @ReactMethod
+    public fun setFloorNumber(floorNumber: Int) {
+        IndoorMapSDK.getInstance().setFloor(floorNumber)
+    }
+
+    @ReactMethod
     public fun setOrigin(storeId: String) {
         var store = IndoorMapSDK.getInstance().getStoreById(storeId)
         if (store != null) {

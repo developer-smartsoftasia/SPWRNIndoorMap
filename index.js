@@ -19,6 +19,12 @@ export const setDestination = (store_id) => {
   SPWIndoorMap.setDestination(store_id);
 };
 
+export const setFloorNumber = (floorNumber) => {
+  if (floorNumber != null) {
+    SPWIndoorMap.setFloorNumber(floorNumber);
+  }
+};
+
 export const setStores = (stores) => {
   SPWIndoorMap.setStores(stores);
 };
