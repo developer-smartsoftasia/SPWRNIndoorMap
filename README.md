@@ -142,4 +142,4 @@ presentIndoorMap();
 1. You must set all stores before calling the getVenues method.
 2. You must get venues before presenting the indoor map screen.
 2. You should call the getVenues method only one time after setting all stores.
-3. Getting venues might return errors from the map provider, You need to get venues again in case of receiving an error.
+3. Getting venues might return errors from the map provider, you need to get venues again in case of receiving an error.
