@@ -102,23 +102,44 @@ import {
   setOrigin,
   setDestination,
   setStores,
+  setFloorNumber
 } from "react-native-siam-piwat-indoormap";
 
+
+// set stores
 setStores(<<shops (JSONArray)>>);
+
+
 //get veunes
-getVenues(
-	() => {
-	// get stores
-	getAllStores((result) => {
-		var stores = result;
-
-		//   setOrigin(stores[0].id);
-		setDestination(<<shop id>>);
-
-		presentIndoorMap();
-	});
-	},
+getVenues(() => {
+// get stores
+	
+},
 	(err) => {},
 );
 
+
+// set floor number
+setFloorNumber(<<floor number>>);
+
+// set origin store
+setOrigin(<<shop id>>);
+		
+// set destination store
+setDestination(<<shop id>>);
+
+// get all stores
+getAllStores((result) => {
+	var stores = result;
+});
+
+// present indoor map screen
+presentIndoorMap();
+
 ```
+
+#### Note
+1. You must set all stores before calling the getVenues method.
+2. You must get venues before presenting the indoor map screen.
+2. You should call the getVenues method only one time after setting all stores.
+3. Getting venues might return errors from the map provider, You need to get venues again in case of receiving an error.
