@@ -4,7 +4,7 @@
 
 `$ npm install react-native-siam-piwat-indoormap@1.0.4 --save`
 
-### OR
+#### OR
 
 `yarn add react-native-siam-piwat-indoormap@1.0.4`
 
@@ -45,8 +45,18 @@
 #### Android
 
 1. Verify `compileSdkVersion = 29`
-2. Add `maven { url 'https://dl.bintray.com/ssa/com.siampiwat' }` to build.gradle
-3. Add this code to `MainApplication` file.
+2. Add `maven { url 'https://dl.bintray.com/ssa/com.siampiwat' }` to `build.gradle`
+3. Add dependencies to `app/build.gradle`
+
+```groovy
+dependencies {
+    ..
+    implementation 'com.siampiwat:indoormapsdk:0.9.6'
+    ..
+}
+```
+
+4. Add this code to `MainApplication` file.
 
 ```kotlin
 
@@ -59,16 +69,18 @@ override fun onCreate() {
 
 ```
 
-4. Add this code to `MainActivity`
+5. Add this code to `MainActivity`
 
 ```kotlin
 
+// >>> import these <<<
 import com.siampiwat.indoormapsdk.IndoorMapSDK
 import com.siampiwat.indoormapsdk.data.appenum.SPWApplicationSlug
 import com.siampiwat.indoormapsdk.data.appenum.SPWLanguage
 
 override fun onCreate(savedInstanceState: Bundle?) {
 	super.onCreate(savedInstanceState)
+	// >>> Add this method <<<
 	IndoorMapSDK.initialize(SPWApplicationSlug.ICON_SIAM, "", SPWLanguage.TH, true)
 }
 
