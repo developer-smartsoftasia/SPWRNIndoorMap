@@ -69,13 +69,9 @@ public class RNIndoormapModule(reactContext: ReactApplicationContext) : ReactCon
 
     @ReactMethod
     public fun presentIndoorMap() {
-        val handler: Handler = Handler()
-        val run = Runnable {
-            val intent = Intent(reactApplicationContext, IndoorMapView::class.java) // mContext got from your overriden constructor
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            reactApplicationContext.startActivity(intent)
-        }
-        handler.post(run)
+        val intent = Intent(reactApplicationContext, IndoorMapView::class.java) // mContext got from your overriden constructor
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        reactApplicationContext.startActivity(intent)
     }
 }
 
