@@ -1,6 +1,7 @@
 package com.siampiwat.indoormap
 
 import android.content.Intent
+import android.os.Handler
 import android.util.Log
 import com.facebook.react.bridge.*
 import com.google.gson.Gson
@@ -68,9 +69,13 @@ public class RNIndoormapModule(reactContext: ReactApplicationContext) : ReactCon
 
     @ReactMethod
     public fun presentIndoorMap() {
-        val intent = Intent(reactApplicationContext, IndoorMapView::class.java) // mContext got from your overriden constructor
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        reactApplicationContext.startActivity(intent)
+        val handler: Handler = Handler()
+        val run = Runnable {
+            val intent = Intent(reactApplicationContext, IndoorMapView::class.java) // mContext got from your overriden constructor
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            reactApplicationContext.startActivity(intent)
+        }
+        handler.post(run)
     }
 }
 
