@@ -119,7 +119,7 @@ getVenues(() => {
 );
 
 
-// set floor number
+// set floor number (Number: floor number  0 is G floor , -1 is B1)
 setFloorNumber(<<floor number>>);
 
 // set origin store
