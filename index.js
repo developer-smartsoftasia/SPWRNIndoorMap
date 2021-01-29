@@ -29,6 +29,10 @@ export const setStores = (stores) => {
   SPWIndoorMap.setStores(stores);
 };
 
+export const resetOriginAndDestination = () => {
+  SPWIndoorMap.resetOriginAndDestination();
+};
+
 export const getStore = (store_id, successCallback) => {
   SPWIndoorMap.getStore(store_id, (res) => {
     successCallback(JSON.parse(res));

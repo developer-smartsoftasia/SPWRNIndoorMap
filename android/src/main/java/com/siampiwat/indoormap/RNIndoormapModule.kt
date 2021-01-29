@@ -54,6 +54,11 @@ public class RNIndoormapModule(reactContext: ReactApplicationContext) : ReactCon
     }
 
     @ReactMethod
+    public fun resetOriginAndDestination() {
+        IndoorMapSDK.getInstance().resetOriginAndDestination()
+    }
+
+    @ReactMethod
     public fun getVenuesSuccessCallback(successCallback: Callback, failureCallback: Callback) {
         IndoorMapSDK.getInstance().getVenue(object : IndoorMapSDK.GetVenueCallback {
             override fun onSuccess() {

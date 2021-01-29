@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SPWIndoormap"
-  s.version      = "0.1.0"
+  s.version      = "1.1.0"
   s.summary      = "SPWIndoormap"
   s.description  = <<-DESC
                   Siam Piwat Indoor map for React-Native
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React"
-  s.dependency "SiamPiwatRNIndoorMapSDK", "0.1.3"
+  s.dependency "SiamPiwatRNIndoorMapSDK", "0.1.4"
 
 end
 

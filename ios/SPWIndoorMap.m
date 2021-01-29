@@ -66,8 +66,12 @@ RCT_EXPORT_METHOD(setDestination:(NSString *) storeId) {
   dispatch_async(dispatch_get_main_queue(), ^{
     [SPWIndoorMapManager setDestination:storeId];
   });
-
 }
+
+RCT_EXPORT_METHOD(resetOriginAndDestination) {
+  [SPWIndoorMapManager resetOrginAndDestination];
+}
+
 
 @end
 
