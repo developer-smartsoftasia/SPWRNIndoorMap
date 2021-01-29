@@ -2,15 +2,15 @@
 
 ## Getting started
 
-`$ npm install react-native-siam-piwat-indoormap@1.0.8 --save`
+`$ npm install react-native-siam-piwat-indoormap@1.1.2 --save`
 
 #### OR
 
-`yarn add react-native-siam-piwat-indoormap@1.0.8`
+`yarn add react-native-siam-piwat-indoormap@1.1.2`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-siam-piwat-indoormap@1.0.8`
+`$ react-native link react-native-siam-piwat-indoormap@1.1.2`
 
 ### Note
 
@@ -51,7 +51,7 @@
 ```groovy
 dependencies {
     ..
-    implementation 'com.siampiwat:indoormapsdk:0.9.6'
+    implementation 'com.siampiwat:indoormapsdk:0.9.7'
     ..
 }
 ```
@@ -102,7 +102,8 @@ import {
   setOrigin,
   setDestination,
   setStores,
-  setFloorNumber
+  setFloorNumber,
+  resetOriginAndDestination
 } from "react-native-siam-piwat-indoormap";
 
 
@@ -113,7 +114,7 @@ setStores(<<shops (JSONArray)>>);
 //get veunes
 getVenues(() => {
 // get stores
-	
+
 },
 	(err) => {},
 );
@@ -124,7 +125,7 @@ setFloorNumber(<<floor number>>);
 
 // set origin store
 setOrigin(<<shop id>>);
-		
+
 // set destination store
 setDestination(<<shop id>>);
 
@@ -133,13 +134,18 @@ getAllStores((result) => {
 	var stores = result;
 });
 
+// reset origin and destination
+resetOriginAndDestination();
+
+
 // present indoor map screen
 presentIndoorMap();
 
 ```
 
 #### Note
+
 1. You must set all stores before calling the getVenues method.
 2. You must get venues before presenting the indoor map screen.
-2. You should call the getVenues method only one time after setting all stores.
-3. Getting venues might return errors from the map provider, you need to get venues again in case of receiving an error.
+3. You should call the getVenues method only one time after setting all stores.
+4. Getting venues might return errors from the map provider, you need to get venues again in case of receiving an error.

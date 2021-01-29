@@ -38,7 +38,10 @@ RCT_EXPORT_METHOD(setStores:(NSArray<NSDictionary<NSString *, id> *> *) stores) 
 }
 
 RCT_EXPORT_METHOD(setFloorNumber:(int) floorNumber) {
-  [SPWIndoorMapManager setFloor:floorNumber];
+  
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [SPWIndoorMapManager setFloor:floorNumber];
+    });
 }
 
 RCT_EXPORT_METHOD(getStoreByID:(NSString *) storeId success:(RCTResponseSenderBlock)successCallback) {
@@ -69,7 +72,10 @@ RCT_EXPORT_METHOD(setDestination:(NSString *) storeId) {
 }
 
 RCT_EXPORT_METHOD(resetOriginAndDestination) {
-  [SPWIndoorMapManager resetOrginAndDestination];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [SPWIndoorMapManager resetOrginAndDestination];
+    });
+  
 }
 
 
