@@ -14,6 +14,8 @@
 
 ### Note
 
+`For react-native@63.3`
+
 #### iOS
 
 1. Verify Podfile `pod 'SPWIndoormap', :path => '../node_modules/react-native-siam-piwat-indoormap/ios/RNIndoormap.podspec'`
