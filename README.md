@@ -2,15 +2,15 @@
 
 ## Getting started
 
-`$ npm install react-native-siam-piwat-indoormap@1.1.2 --save`
+`$ npm install react-native-siam-piwat-indoormap@1.1.4 --save`
 
 #### OR
 
-`yarn add react-native-siam-piwat-indoormap@1.1.2`
+`yarn add react-native-siam-piwat-indoormap@1.1.4`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-siam-piwat-indoormap@1.1.2`
+`$ react-native link react-native-siam-piwat-indoormap@1.1.4`
 
 ### Note
 
