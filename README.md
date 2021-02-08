@@ -2,15 +2,15 @@
 
 ## Getting started
 
-`$ npm install react-native-siam-piwat-indoormap@1.1.4 --save`
+`$ npm install react-native-siam-piwat-indoormap@1.1.5 --save`
 
 #### OR
 
-`yarn add react-native-siam-piwat-indoormap@1.1.4`
+`yarn add react-native-siam-piwat-indoormap@1.1.5`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-siam-piwat-indoormap@1.1.4`
+`$ react-native link react-native-siam-piwat-indoormap@1.1.5`
 
 ### Note
 
@@ -53,7 +53,7 @@
 ```groovy
 dependencies {
     ..
-    implementation 'com.siampiwat:indoormapsdk:0.9.7'
+    implementation 'com.siampiwat:indoormapsdk:0.9.9'
     ..
 }
 ```
