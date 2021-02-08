@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React"
-  s.dependency "SiamPiwatRNIndoorMapSDK", "0.1.6"
+  s.dependency "SiamPiwatRNIndoorMapSDK", "0.1.7"
 
 end
 
