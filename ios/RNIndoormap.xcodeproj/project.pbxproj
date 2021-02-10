@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E6B7FFC25B8171A00C5EFD1 /* SPWIndoorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B7FFB25B8171A00C5EFD1 /* SPWIndoorMap.m */; };
+		5E858E0325D453B20002B9ED /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E858E0225D453B20002B9ED /* Foundation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		134814201AA4EA6300B7C361 /* libRNIndoormap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNIndoormap.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6B7FFA25B8171A00C5EFD1 /* SPWIndoorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPWIndoorMap.h; sourceTree = "<group>"; };
 		5E6B7FFB25B8171A00C5EFD1 /* SPWIndoorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPWIndoorMap.m; sourceTree = "<group>"; };
+		5E858E0125D453B20002B9ED /* RNIndoormap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNIndoormap-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E858E0225D453B20002B9ED /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,9 +53,11 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				5E858E0225D453B20002B9ED /* Foundation.swift */,
 				5E6B7FFA25B8171A00C5EFD1 /* SPWIndoorMap.h */,
 				5E6B7FFB25B8171A00C5EFD1 /* SPWIndoorMap.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				5E858E0125D453B20002B9ED /* RNIndoormap-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +92,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -113,6 +119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E858E0325D453B20002B9ED /* Foundation.swift in Sources */,
 				5E6B7FFC25B8171A00C5EFD1 /* SPWIndoorMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,32 +211,41 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNIndoormap;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNIndoormap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNIndoormap;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNIndoormap-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

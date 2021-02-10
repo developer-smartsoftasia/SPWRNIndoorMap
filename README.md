@@ -2,15 +2,15 @@
 
 ## Getting started
 
-`$ npm install react-native-siam-piwat-indoormap@1.1.6 --save`
+`$ npm install react-native-siam-piwat-indoormap@1.2.7 --save`
 
 #### OR
 
-`yarn add react-native-siam-piwat-indoormap@1.1.6`
+`yarn add react-native-siam-piwat-indoormap@1.2.7`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-siam-piwat-indoormap@1.1.6`
+`$ react-native link react-native-siam-piwat-indoormap@1.2.7`
 
 ### Note
 
@@ -21,6 +21,20 @@
 1. Verify Podfile `pod 'SPWIndoormap', :path => '../node_modules/react-native-siam-piwat-indoormap/ios/RNIndoormap.podspec'`
 2. Run `Pod install`
 3. Add this code to `Appdelegate.m`
+
+##### Workaround
+
+- dyld: Symbol not found or dyld: launch, loading dependent libraries
+
+```ruby
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+    end
+  end
+end
+```
 
 ```objective-c
 
