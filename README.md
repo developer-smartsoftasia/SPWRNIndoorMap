@@ -6,11 +6,11 @@
 
 #### OR
 
-`yarn add react-native-siam-piwat-indoormap@1.3.0`
+`yarn add react-native-siam-piwat-indoormap@1.3.1`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-siam-piwat-indoormap@1.3.0`
+`$ react-native link react-native-siam-piwat-indoormap@1.3.1`
 
 ### Note
 
@@ -62,13 +62,13 @@ end
 #### Android
 
 1. Verify `compileSdkVersion = 29`
-2. Add `maven { url 'https://dl.bintray.com/ssa/com.siampiwat' }` to `build.gradle`
+2. Add `mavenCentral()` to `build.gradle` (in case of mising)
 3. Add dependencies to `app/build.gradle`
 
 ```groovy
 dependencies {
     ..
-    implementation 'com.siampiwat:indoormapsdk:0.9.9'
+    implementation 'io.github.smartsoftasia:indoormapsdk:0.9.9'
     ..
 }
 ```
